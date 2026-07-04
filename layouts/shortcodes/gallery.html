@@ -1,0 +1,85 @@
+{{ $imagesStr := .Get "images" }}
+{{ $images := split $imagesStr "," }}
+{{ $uniqueId := printf "gallery-%d" .Ordinal }}
+
+<div id="{{ $uniqueId }}" style="margin: 2rem 0;">
+
+  <!-- Scoped styles using the unique ID -->
+  <style>
+    #{{ $uniqueId }} .hb-gallery-main {
+      transition: opacity 0.25s ease-in-out;
+      width: 100%;
+      max-height: 500px;
+      object-fit: contain;
+      border-radius: 12px;
+      display: block;
+    }
+    #{{ $uniqueId }} .hb-gallery-thumb {
+      cursor: pointer;
+      border-radius: 8px;
+      overflow: hidden;
+      border: 3px solid transparent;
+      transition: border-color 0.2s ease, transform 0.2s ease;
+      background: none;
+    }
+    #{{ $uniqueId }} .hb-gallery-thumb img {
+      width: 100%;
+      height: 80px;
+      object-fit: cover;
+      display: block;
+    }
+    #{{ $uniqueId }} .hb-gallery-thumb.active {
+      border-color: #3b82f6;
+      transform: scale(1.04);
+    }
+    #{{ $uniqueId }} .hb-gallery-thumb:hover:not(.active) {
+      border-color: rgba(59,130,246,0.45);
+      transform: scale(1.04);
+    }
+    #{{ $uniqueId }} .hb-gallery-thumbs {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+      gap: 10px;
+      margin-top: 12px;
+    }
+  </style>
+
+  <!-- Main preview image -->
+  <div style="border-radius: 12px; overflow: hidden; box-shadow: 0 4px 16px rgba(0,0,0,0.12);">
+    <img id="main-{{ $uniqueId }}" class="hb-gallery-main" src="{{ index $images 0 }}" alt="Gallery preview" />
+  </div>
+
+  <!-- Thumbnails — only shown when more than 1 image -->
+  {{ if gt (len $images) 1 }}
+  <div class="hb-gallery-thumbs">
+    {{ range $index, $img := $images }}
+    <div class="hb-gallery-thumb {{ if eq $index 0 }}active{{ end }}"
+         onclick="hbGalleryChange('{{ $uniqueId }}', '{{ $img }}', this)">
+      <img src="{{ $img }}" alt="Thumbnail {{ $index }}" />
+    </div>
+    {{ end }}
+  </div>
+  {{ end }}
+
+</div>
+
+<script>
+  function hbGalleryChange(galleryId, imgSrc, clickedEl) {
+    var gallery = document.getElementById(galleryId);
+    if (!gallery) return;
+    var mainImg = document.getElementById('main-' + galleryId);
+    if (!mainImg) return;
+
+    // Fade out, swap src, fade back in
+    mainImg.style.opacity = '0';
+    setTimeout(function() {
+      mainImg.src = imgSrc;
+      mainImg.style.opacity = '1';
+    }, 250);
+
+    // Update active class
+    var thumbs = gallery.querySelectorAll('.hb-gallery-thumb');
+    thumbs.forEach(function(t) { t.classList.remove('active'); });
+    clickedEl.classList.add('active');
+  }
+</script>

@@ -1,0 +1,159 @@
+schema: hugoblox/author/v1
+slug: me
+is_owner: true
+name:
+  display: Sourabh Vasant Gothe
+  given: Sourabh
+  family: Gothe
+  alternate: ''  
+  pronunciation: ''  
+  pronouns: ''
+postnominals: []
+status:
+  icon: ""
+role: Chief Engineer, Machine Learning
+bio: |
+  Chief Machine Learning Engineer bridging the gap between rigorous theoretical innovation and productization. Specializing in NLP (Language Models, Knowledge Graphs), Computer Vision (Image/Video understanding) and on-device AI productization. Inventor and author with a portfolio of 10+ patents (8 A1-grade) and 10+ publications in top-tier venues (AAAI, WACV, ICASSP). Proficient in C++, Python, and algorithms, with a proven track record of architecting highly optimized, shipping production-ready AI systems. Active reviewer for NeurIPS, EMNLP, and WACV, passionate about driving deep-tech research into tangible product features.
+
+affiliations:
+  - name: Samsung R&D Institute
+    url: https://research.samsung.com/sri-b
+
+links:
+  - icon: at-symbol
+    url: mailto:sourabhgothe@gmail.com
+    label: E-mail Me
+  - icon: brands/linkedin
+    url: https://www.linkedin.com/in/sourabh-gothe-a3b373aa/
+  - icon: academicons/google-scholar
+    url: https://scholar.google.com/citations?user=_DnwquAAAAAJ&hl=en
+  - icon: brands/x
+    url: https://twitter.com/sourabhgothe
+
+interests:
+  - Machine Learning & Deep Learning
+  - Computer Vision & 3D Dynamics
+  - Natural Language Processing (SLM/LLM/Knowledge Graphs)
+  - Agentic Memory & Personalization (RAG/GraphRAG)
+  - On-Device AI Optimization
+  - Research, Patent Drafting & Academic Reviewing
+
+education:
+  - degree: M.Tech in Data Science And Business Analytics
+    institution: Indian Institute of Science (IISc) - Bangalore
+    start: 2021-08-01
+    end: 2023-07-31
+    summary: |
+      **GPA:** 9.3 | Sponsored M.Tech (Online) by Samsung Research
+  - degree: Bachelors in Engineering, Computer and Information Sciences
+    institution: PES Institute of Technology - Bangalore
+    start: 2013-08-01
+    end: 2017-06-30
+    summary: |
+      **GPA:** 9.13
+
+experience:
+  - role: Chief Engineer, Machine Learning
+    org: Samsung R&D
+    start: 2024-03-01
+    summary: |
+      - Leading a research and development initiative on agentic memory and Knowledge Graph-based personalization.
+      - Led research project focused on Knowledge Graphs on mobile devices to enhance user personalization experience. Successfully published our research findings in AAAI Main Track-2026.
+      - Architected a training-free, on-device physics engine converting 2D images to 3D dynamics (ICASSP 2025), optimizing performance for strict mobile constraints.
+      - Engineered an end-to-end vision model (one-stage anchor-free object detection) for aesthetic widget placement, successfully commercialized and currently serving across Samsung Galaxy S25, S26, and other flagship devices.
+  - role: Lead Engineer, Machine Learning
+    org: Samsung R&D
+    start: 2021-03-01
+    end: 2024-01-31
+    summary: |
+      - Developed a highly optimized temporal segmentation deep learning architecture utilizing only 3M trainable parameters (22× fewer than SOTA) while achieving a 13.92% accuracy improvement (published in ICASSP 2023).
+      - Owned the end-to-end product lifecycle—from data curation and DNN modeling to on-device inference optimization—for a novel hybrid video-understanding algorithm (WACV 2024, ICASSP 2024).
+      - Successfully commercialized the temporal segmentation solution for production, directly integrating it into Samsung Galaxy S24 and S25 flagship devices.
+      - Designed a patented Emoji Drawing Detection system and developed an end-to-end native C++ neural inference engine for CNN-based models (CVIP 2022).
+  - role: Senior Software Engineer
+    org: Samsung R&D
+    start: 2019-02-01
+    end: 2021-03-31
+    summary: |
+      - Developed and deployed an on-device multilingual language model for the Indian market, enabling real-time language detection, code-switching, and macaronic language modeling.
+      - Engineered a lightweight Language Detection Engine (ICSC 2020) and a comprehensive on-device grammatical error correction system optimized for mobile constraints (ICSC 2021). Commercialized native C++ inference engines and NLP features into the Samsung Neural Keyboard, deployed globally across Galaxy flagship devices.
+  - role: Software Engineer
+    org: Samsung R&D
+    start: 2017-07-01
+    end: 2019-03-31
+    summary: |
+      - Trained and optimized N-gram and LSTM-based neural language models for multiple Indian and global languages, successfully commercialized for global market deployment.
+      - Implemented advanced data structures, including MARISA and CEDAR TRIE, to achieve highly efficient on-device user language modeling.
+  - role: Research Intern
+    org: Samsung R&D
+    start: 2017-01-01
+    end: 2017-07-31
+    summary: |
+      - Developed an HMM-based machine learning algorithm for human activity detection, specifically optimized for sensory data on low-resource devices.
+
+skills:
+  - name: Programming Languages
+    items:
+      - label: C++
+        level: 5
+      - label: Python
+        level: 5
+      - label: Java
+        level: 4
+      - label: Kotlin
+        level: 3
+  - name: Frameworks & Libraries
+    items:
+      - label: PyTorch
+        level: 5
+      - label: LangGraph
+        level: 4
+      - label: Ollama
+        level: 4
+      - label: ONNX
+        level: 4
+      - label: TFLite
+        level: 4
+      - label: Hugging Face (peft)
+        level: 4
+  - name: AI/ML Domains
+    items:
+      - label: Agent Memory & Personalization
+        level: 5
+      - label: RAG & GraphRAG
+        level: 5
+      - label: Computer Vision & 3D Dynamics
+        level: 5
+      - label: Natural Language Processing
+        level: 5
+      - label: Generative AI (LLM/SLM)
+        level: 4
+      - label: On-Device AI Optimization
+        level: 5
+
+languages:
+  - name: English
+    level: 5
+    label: Native/Fluent
+
+awards:
+  - title: "Samsung Best Paper Award (Bronze Award)"
+    awarder: "Samsung R&D"
+    date: "2024-12-01"
+    icon: "trophy"
+    summary: "Awarded Bronze for the best paper (PhysID: Physics-Based Interactive Dynamics From A Single-View Image) at Samsung R&D."
+  - title: "Eminent Author of the Year"
+    awarder: "Samsung R&D"
+    date: "2023-12-01"
+    icon: "award"
+    summary: "Received the Samsung Annual Award 2023 for outstanding publication record."
+  - title: "Star of the Quarter"
+    awarder: "Samsung R&D"
+    date: "2023-09-01"
+    icon: "star"
+    summary: "Recognized as Star of the Quarter multiple times in 2021, 2022, and 2023 for excellence in performance and delivery."
+  - title: "Samsung Software Competency Level - Professional"
+    awarder: "Samsung R&D"
+    date: "2022-06-01"
+    icon: "code"
+    summary: "Achieved the Professional software competency level, demonstrating a thorough understanding of advanced data structures and algorithms."
